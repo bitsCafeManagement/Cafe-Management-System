@@ -1,0 +1,29 @@
+.form-group ul{
+    display: none;
+}
+
+.content-section{
+    width: 40%;
+    margin: 5%;
+    margin-left: 10%;
+}
+
+.form-text p{
+    display: none;
+}
+
+#hint_id_username{
+    display: none;
+}
+
+#regbtn:hover{
+    color: white;
+    font-weight: bolder;
+}
+
+#regbtn{
+    background: rgb(255, 197, 89);
+    border: 1px solid rgb(255, 197, 89);
+    color: black;
+    font-weight: bold;
+}
