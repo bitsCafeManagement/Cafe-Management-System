@@ -1,18 +1,120 @@
+ .navsec{
+     width: 100%;
+     background: #C23C00;
+     display: flex;
+     justify-content: space-between;
+     padding: 0.5%;
+     padding-left: 2%;
+ }
+
+ .logo h1{
+     margin-top: 2%;
+     font-size: 25px;
+     color: white;
+ }
+
+ .navlinks{
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     margin-top: 1%;
+     width: 18%;
+     margin-right: 3%;
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .navlinks a{
+    color: white;
+    text-decoration: none;
+ }
+
+ .navlinks a:hover{
+    text-shadow: 3px 3px black;
+    transition: .3s,.5s ease-in-out;
+    color: rgb(255, 255, 255);
+    text-decoration:none;
+ }
+
+ .welcomebody{
+    display: flex;
+    margin: 5%;
+    justify-content: space-between;
+}
+
+.image{
+    width: 40%;
+}
+
+.image img{
+    width: 100%;
+}
+
+.welcometxt{
+    width: 55%;
+    padding: 2%;
+    margin-top: 7%;
+}
+
+.welcometxt h2{
+    font-weight: bold;
+}
+
+.welcometxt hr{
+    background: rgb(131, 131, 131);
+    box-shadow: 0 1px 2px 0 black;
+}
+
+.homelinks{
+    text-align: right;
+}
+
+.homelinks a{
+    background: #C23C00;
+    padding: 1%;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 1px solid #C23C00;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.377);
+}
+
+.homelinks a:hover{
+    transition: .3s,.5s ease-in-out;
+    color: #C23C00;
+    text-decoration: none;
+    background: white;
+    border: 1px solid #C23C00;
+
+}
+ 
+.content-section{
+    margin: 1%;
+    margin-left: 32%;
+    margin-right: 32%;
+    padding: 1%;
+    border-radius: 5px;
+    background: #ffecadd3;
+    box-shadow: 0 5px 5px 0 gray;
+}
+
 .form-group ul{
     display: none;
 }
 
-.content-section{
-    width: 40%;
-    margin: 5%;
-    margin-left: 10%;
-    padding: 1%;
-    border-radius: 5px;
-    box-shadow: 0 5px 5px 0 gray;
-}
-
 .form-text p{
     display: none;
+}
+
+.form-group input:active{ 
+    border: 1px solid #C23C00;
+    box-shadow: none; 
+}
+
+.form-group input:focus{
+    border: 1px solid #C23C00;
+    box-shadow: 0 1px 3px 1px #C23C00;
 }
 
 #hint_id_username{
@@ -20,13 +122,35 @@
 }
 
 #regbtn:hover{
+    background: #ff5100;
+    border: 1px solid #ff5100;
     color: white;
     font-weight: bolder;
 }
 
 #regbtn{
-    background: rgb(255, 216, 41);
-    border: 1px solid rgb(255, 197, 89);
-    color: black;
+    background: #C23C00;
+    border: 1px solid #C23C00;
+    color: rgb(26, 26, 26);
     font-weight: bold;
+}
+
+
+
+@media(max-width:600px){
+    .content-section{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 15%;
+    }
+
+}
+
+@media(min-height:1020px){
+    .content-section{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 18%;
+    }
+
 }

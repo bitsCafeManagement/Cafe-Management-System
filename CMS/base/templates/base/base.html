@@ -5,19 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static "base/css/style.css" %}">
+    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static "blog/style.css" %}">
 
     <title>CMS</title>
     
 </head>
 <body>
+    <div class="navsec">
+        <div class="logo">
+            <h1>Cafe Management System</h1>
+        </div>
+
+        <div class="navlinks">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'login' %}">Order</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </div>
+    </div>
+
     {% block homeblock %}{% endblock homeblock %}
 
-    {% block regblock %}{% endblock regblock %}
+    <section class="usersec">
+        {% block regblock %}{% endblock regblock %}
 
-    {% block logblock %}{% endblock logblock %}
+        {% block logblock %}{% endblock logblock %}
+    </section>
 
 </body>
 </html>

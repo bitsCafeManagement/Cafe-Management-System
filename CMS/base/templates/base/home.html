@@ -1,1 +1,20 @@
-{% block homeblock %}{% endblock homeblock %}
+{% extends "base/base.html" %}
+{% load static %}
+{% block homeblock %}
+<section class="homesec">
+    <div class="welcomebody">
+        <div class="image">
+            <img src="{% static 'base/assets/brand.png' %}" alt="">
+        </div>
+        <div class="welcometxt">
+            <h2>Welcome to our cafe</h2>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+            <div class="homelinks">
+                <a href="{% url 'register' %}">Sign Up Today</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock homeblock %}
