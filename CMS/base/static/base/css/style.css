@@ -29,13 +29,13 @@
  }
 
  .navlinks a:hover{
-    text-shadow: 3px 3px black;
+    text-shadow: 3px 3px 3px rgb(37, 37, 37);
     transition: .3s,.5s ease-in-out;
     color: rgb(255, 255, 255);
     text-decoration:none;
  }
 
- .welcomebody{
+.welcomebody{
     display: flex;
     margin: 5%;
     justify-content: space-between;
@@ -65,7 +65,7 @@
 }
 
 .homelinks{
-    text-align: right;
+    text-align: left;
 }
 
 .homelinks a{
@@ -85,17 +85,18 @@
     color: #C23C00;
     text-decoration: none;
     background: white;
-    border: 1px solid #C23C00;
+    border: 1px solid #c2c2c2;
 
 }
  
 .content-section{
     margin: 1%;
+    margin-top: 2%;
     margin-left: 32%;
     margin-right: 32%;
     padding: 1%;
     border-radius: 5px;
-    background: #ffecadd3;
+    background: #fffefa;
     box-shadow: 0 5px 5px 0 gray;
 }
 
@@ -121,6 +122,13 @@
     display: none;
 }
 
+#regbtn{
+    background: #C23C00;
+    border: 1px solid #C23C00;
+    color: rgb(255, 255, 255);
+    font-weight: regular;
+}
+
 #regbtn:hover{
     background: #ff5100;
     border: 1px solid #ff5100;
@@ -128,14 +136,48 @@
     font-weight: bolder;
 }
 
-#regbtn{
-    background: #C23C00;
-    border: 1px solid #C23C00;
-    color: rgb(26, 26, 26);
+.contactbody{
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-right: 40%;
+}
+
+.contactbody hr{
+    background: rgba(0, 0, 0, 0.377);
+    box-shadow: 0 1px 2px 0 rgb(131, 131, 131);
+}
+
+.contactbody h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: right;
     font-weight: bold;
 }
 
+.contactbody h3{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+}
 
+.contactbody h5{
+    color: #C23C00;
+    text-align: right;
+}
+
+.socials{
+    margin-left: 85%;
+    width: 15%;
+}
+
+.socials i{
+    cursor: pointer;
+    color: blue;
+    display: block;
+    text-align: right;
+}
+
+.socials i:hover{
+    text-decoration: underline;
+}
 
 @media(max-width:600px){
     .content-section{
