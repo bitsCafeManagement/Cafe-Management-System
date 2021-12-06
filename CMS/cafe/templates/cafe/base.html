@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'cafe/css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    {% if title %}
+        <title>CMS - {{title}}</title>
+    {% else %}
+        <title>CMS</title>
+    {% endif %}
+</head>
+<body>
+    <div class="navsec">
+        <div class="logo">
+            <h1>Cafe Management System</h1>
+        </div>
+
+        <div class="navlinks">
+            <a href="{% url 'homecafe' %}">Home</a>
+            <a href="{% url 'menucafe' %}">Menu</a>
+            <a href="{% url 'communitycafe' %}">Community</a>
+        </div>
+
+        <div class="profilelink">
+            <a href="{% url 'profile' %}"><img id="profilepic" class="rounde-circle account-img" src="{{ user.profile.image.url }}"></a>
+            <a class="logout" href="{% url 'logout' %}">LOGOUT</a>
+        </div>
+    </div>
+
+    {% block profileblock %}{% endblock profileblock %}
+
+    {% block homeblock %}{% endblock homeblock %}
+    {% block menublock %}{% endblock menublock %}
+    {% block communityblock %}{% endblock communityblock %}
+
+</body>
+</html>

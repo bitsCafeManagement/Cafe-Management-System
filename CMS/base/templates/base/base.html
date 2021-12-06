@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>CMS</title> 
+    {% if title %}
+        <title>CMS - {{title}}</title>
+    {% else %}
+        <title>CMS</title>
+    {% endif %}
 </head>
 <body>
     <div class="navsec">
@@ -21,7 +25,14 @@
             <a href="{% url 'login' %}">Order</a>
             <a href="{% url 'contact' %}">Contact</a>
         </div>
+
+        <div class="profilelink">
+            <a class="logout" href="{% url 'register' %}">Register</a>
+            <a href="{% url 'login' %}">Login</a>
+        </div>
     </div>
+
+    
 
     {% block homeblock %}{% endblock homeblock %}
 
@@ -29,6 +40,9 @@
         {% block regblock %}{% endblock regblock %}
 
         {% block logblock %}{% endblock logblock %}
+        {% block logoutblock %}{% endblock logoutblock %}
+
+        {% block profileblock %}{% endblock profileblock %}
 
         {% block contactblock %}{% endblock contactblock %}
     </section>

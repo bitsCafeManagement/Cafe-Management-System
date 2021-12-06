@@ -1,18 +1,29 @@
 from django.http import request
-from django.shortcuts import render
+from .forms import RegistrationForm, AuthenticateForm
+from django.shortcuts import redirect, render
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 def register(request):
-    form = UserCreationForm()
-    return render(request, 'base/register.html', {'form':form})
-
-def login(request):
-    form = AuthenticationForm()
-    return render(request, 'base/login.html', {'form':form})
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form.cleaned_data
+            return redirect('login')
+    else:
+        form = RegistrationForm()
+    return render(request, 'base/register.html', {'form':form, 'title':'Register'})
 
 def home(request):
-    return render(request, 'base/home.html')
+    context = {
+        'title':'Home'
+    }
+    return render(request, 'base/home.html', context)
 
 def contact(request):
-    return render(request, 'base/contact.html')
+    context = {
+        'title':'Contact'
+    }
+    return render(request, 'base/contact.html', context)
 
