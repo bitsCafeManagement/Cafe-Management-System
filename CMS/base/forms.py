@@ -14,6 +14,5 @@ class RegistrationForm(UserCreationForm):
         
 class AuthenticateForm(AuthenticationForm):
     class Meta:
-        username = forms.CharField(max_length=60, label= 'Email/Username')
         model = User
         fields = ['username', 'password']

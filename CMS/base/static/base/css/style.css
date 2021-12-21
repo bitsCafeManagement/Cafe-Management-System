@@ -119,7 +119,7 @@
 }
 
 #hint_id_password1 ul{
-    display: none;
+    list-style-type: square;
 }
 
 .form-text p{
