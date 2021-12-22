@@ -1,5 +1,16 @@
 #body{
-   background: fixed #F8D300 ; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #F8D300 ; 
+}
+
+#body::-webkit-scrollbar{
+    width: .5em;
+    background: #dd3f3a;
+}
+
+#body::-webkit-scrollbar-thumb{
+    background: #F8D300;
+    border: 3px solid #DD403A;
 }
 
 .navsec{
@@ -14,7 +25,6 @@
 }
 
 .logo h1{
-    font-family: 'Merienda', cursive;
     margin-top: 2%;
     font-size: 25px;
     color: rgb(255, 255, 255);
@@ -23,7 +33,6 @@
 }
 
 .navlinks{
-    font-family: Arial, Helvetica, sans-serif;
      font-weight: bold;
      margin-top: 1%;
      width: 20%;
@@ -39,7 +48,7 @@
 
 .navlinks a:hover{
     color: rgb(255, 255, 255);
-    text-decoration:wavy overline underline #F8D300 2px;
+    text-decoration:wavy underline #F8D300 2px;
 }
 
 
@@ -55,8 +64,7 @@
     width: 100%;
     border-radius: 3px;
     margin-right: 15%;
-    color: #3E363F;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #fffefa;
     font-weight: bold;
     font-size: 13px;
 }

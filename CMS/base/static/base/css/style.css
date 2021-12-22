@@ -1,3 +1,7 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 #body{
     background:fixed url("back.jpg");
     background-position: center;
@@ -27,7 +31,6 @@
  }
 
  .logo h1{
-    font-family: 'Merienda', cursive;
      margin-top: 2%;
      font-size: 25px;
      color: rgb(255, 255, 255);
@@ -36,7 +39,6 @@
  }
 
  .navlinks{
-     font-family: Arial, Helvetica, sans-serif;
      font-weight: bold;
      margin-top: 1%;
      width: 20%;
@@ -52,7 +54,7 @@
 
  .navlinks a:hover{
     color: rgb(255, 255, 255);
-    text-decoration:wavy overline underline #F8D300 2px;
+    text-decoration:wavy  underline #F8D300 2px;
  }
 
 .welcomebody{
@@ -66,18 +68,14 @@
     margin-top: 7%;
 }
 
-.welcometxt h2{
-    font-family: 'Merienda', cursive;
-    font-weight: bold;
-}
 
 .welcometxt hr{
     background: rgb(131, 131, 131);
     box-shadow: 0 1px 2px 0 #3E363F;
 }
 
-.welcometxt p{
-    font-weight: 500;
+.welcometxt h2{
+    font-weight: bold;
 }
 
 .homelinks{
@@ -88,22 +86,29 @@
     padding: 2%;
     color: #DD403A;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 20px;
     background: white;
     border: 1px solid #ffffff;
     border-radius: 5px;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.144);
+    margin-right: 2%;
 }
 
 .homelinks a:hover{
-    transition: .3s,.5s ease-in-out;
-    color: white;
     text-decoration: none;
-    background: #DD403A;
-    border: 1px solid #DD403A;
+    color: #3E363F;
+}
 
+
+#regrestaurant{
+    border: #3E363F;
+    background: #3E363F;
+    color: #fff;
+}
+
+#regrestaurant:hover{
+    color: #DD403A;
 }
  
 .content-section{
@@ -124,6 +129,11 @@
 
 .form-text p{
     display: none;
+}
+
+.form-group legend{
+    font-weight: bold;
+    text-align: right;
 }
 
 .form-group input:active{ 
@@ -148,9 +158,9 @@
 }
 
 #regbtn:hover{
-    background: #fffefa;
-    border: 1px solid #DD403A;
-    color: #3E363F;
+    background: #3E363F;
+    border: 1px solid #3E363F;
+    color: #fffefa;
 }
 
 .contactbody{
@@ -165,13 +175,11 @@
 }
 
 .contactbody h1{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: left;
     font-weight: bold;
 }
 
 .contactbody h3{
-    font-family: Arial, Helvetica, sans-serif;
     text-align: left;
 }
 
@@ -208,7 +216,6 @@
     margin-right: 17%;
     margin-top: 16%;
     color: #fffefa;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 13px;
 }
@@ -283,7 +290,6 @@
     padding: .7%;
     color: #DD403A;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 20px;
     background: white;
@@ -301,7 +307,6 @@
 }
 
 #more{
-    font-family: 'Merienda', cursive;
     color: #ffffff;
     padding: 1%;
     padding-bottom: 1.5%;
