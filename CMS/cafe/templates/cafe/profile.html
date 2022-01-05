@@ -3,13 +3,33 @@
 {% block profileblock %}
     <div class="content-section">
       <div class="media">
-        <img id="profilepic" class="rounde-circle account-img" src="{{ user.profile.image.url }}">
+        <div class="mediaimg">
+          <img class="rounde-circle account-img" src="{{ user.profile.image.url }}">
+        </div>
+        
         <div class="media-body">
           <h2 class="account-heading">{{ user.username }}</h2>
           <hr>
           <p class="text-secondary">{{ user.email }}</p>
-          
+          <a href="{% url 'logout' %}">LOGOUT</a>
         </div>
       </div>
     </div>
+
+    <fieldset>
+      <div class="content-section">
+          <form method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              <fieldset class="form-group">
+                  <legend class="border-bottom mb-4">CONTACT INFORMATION</legend>
+                  {{Cform|crispy}}
+                  {{Pform|crispy}}
+              </fieldset>
+  
+              <div class="form-group">
+                  <button id="regbtn" class="btn btn-outline-info" type="submit">UPDATE</button>
+              </div>
+          </form>
+      </div>
+  </fieldset>
 {% endblock profileblock %}

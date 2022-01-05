@@ -1,9 +1,13 @@
 *{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 #body{
-    background:fixed url("back.jpg");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0),rgba(255, 0, 0, 0.411)) , url("back.jpg");
+    background-attachment:fixed;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -22,50 +26,78 @@
     z-index: 1;
      width: 100%;
      background: #dd3f3a;
+     padding: .5%;
      display: flex;
      justify-content: space-between;
-     padding: 0.5%;
      padding-left: 2%;
      position: sticky;
      top: 0;
  }
+ 
+.logo{
+    margin-top: 1%;
+}
 
  .logo h1{
-     margin-top: 2%;
+     font-weight: 900;
      font-size: 25px;
-     color: rgb(255, 255, 255);
-     font-weight: bold;
-     text-shadow: 2px 3px 10px #5a5a5a6b;
+     color: #ffffff;
  }
 
  .navlinks{
      font-weight: bold;
-     margin-top: 1%;
-     width: 20%;
-     margin-right: 5%;
+     margin-top: 1.3%;
+     width: 35%;
+     margin-right: 2%;
      display: flex;
-     justify-content: space-between;
+     justify-content: space-evenly;
  }
 
  .navlinks a{
+    font-size: 14px;
     color: white;
     text-decoration: none;
+    text-shadow: 2px 2px 15px #3E363F;
  }
 
  .navlinks a:hover{
-    color: rgb(255, 255, 255);
-    text-decoration:wavy  underline #F8D300 2px;
+    color: #fffb00;
+    text-decoration: none;
+ }
+
+ #register{
+     color: #3E363F;
+     transition: all .3s ease-in-out;
+     text-shadow: 2px 2px 15px #3e363f00;
+ }
+
+ #register:hover{
+     text-decoration: none;
+     transform: scale(1.08);
+     color: #fff;
+ }
+
+ #login{
+     color: #3E363F;
+     transition: all .3s ease-in-out;
+     text-shadow: 2px 2px 15px #3e363f00;
+ }
+
+ #login:hover{
+     text-decoration: none;
+     transform: scale(1.08);
+     color: #fff;
  }
 
 .welcomebody{
     margin: 3%;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .welcometxt{
     width: 40%;
     padding: 2%;
-    margin-top: 7%;
+    margin-top: 9%;
 }
 
 
@@ -74,8 +106,15 @@
     box-shadow: 0 1px 2px 0 #3E363F;
 }
 
+.welcometxt p{
+    color: #ffffff;
+    font-weight: 600;
+    padding-bottom: 2%;
+}
+
 .welcometxt h2{
-    font-weight: bold;
+    font-weight: 900;
+    font-size: 55px;
 }
 
 .homelinks{
@@ -84,31 +123,35 @@
 
 .homelinks a{
     padding: 2%;
-    color: #DD403A;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 20px;
-    background: white;
-    border: 1px solid #ffffff;
+    font-size: 16px;
+    background: #DD403A;
+    border: 1px solid #DD403A;
     border-radius: 5px;
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.144);
     margin-right: 2%;
 }
 
 .homelinks a:hover{
+    background: white;
+    border: 1px solid white;
     text-decoration: none;
     color: #3E363F;
 }
 
 
 #regrestaurant{
-    border: #3E363F;
-    background: #3E363F;
+    border: #DD403A;
+    background: #DD403A;
     color: #fff;
 }
 
 #regrestaurant:hover{
-    color: #DD403A;
+    background: white;
+    border: 1px solid white;
+    color: #3E363F;
 }
  
 .content-section{
@@ -125,6 +168,9 @@
 
 #hint_id_password1 ul{
     list-style-type: square;
+    padding-left: 5%;
+    color: #3E363F;
+    font-weight: 600;
 }
 
 .form-text p{
@@ -132,8 +178,8 @@
 }
 
 .form-group legend{
-    font-weight: bold;
-    text-align: right;
+    font-weight: 900;
+    text-align: left;
 }
 
 .form-group input:active{ 
@@ -203,94 +249,71 @@
     text-decoration: underline;
 }
 
-.profilelink {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 3%;
-    margin-left: 7%;
+.homecontent{
+    margin-top: 10%;
+    width: 100%;
+
 }
 
-.profilelink a{
-    width: 100%;
-    border-radius: 3px;
-    margin-right: 17%;
-    margin-top: 16%;
-    color: #fffefa;
-    font-weight: bold;
-    font-size: 13px;
+.homecontent h1{
+    color: #fff;
+    text-align: center;
+    padding: 2%;
+    margin-bottom: 3%;
+    font-weight: 900;
 }
 
 .down{
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
-.homecontent{
-    margin-top: 10%;
-
-}
-
 .obj{
-    background: #fffefa;
+    background: #ffffff7c;
+    backdrop-filter: blur(18px);
     width: 25%;
     padding: 3%;
-    margin-top: 4%;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
     box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, 0.089);
-    border-radius: 2%;
-    border-left: 6px solid #3E363F;
+    border: 2px solid #3E363F;
+    border-left: 50px solid #3E363F;
+    transition: all .7s ease-in-out;
+}
+
+.obj:hover{
+    transform: scale(1.05);
 }
 
 .obj h3{
     color: #DD403A;
+    font-weight: 900;
 }
 
-.obj h5{
-    text-align: right;
+.obj p{
+    font-weight: 600;
+    color: #3E363F;
 }
 
-.top{
-    background: #DD403A;
-    width: 100%;
-    padding: 2%;
-}
-.side{
-    display: none;
-    backdrop-filter: blur(12px);
-    border-radius: 1%;
-    background: rgba(255, 255, 255, 0.356);
+
+.obj h4{
+    font-weight: 900;
+    color: #DD403A;
+    font-size: 18px;
 }
 
-.side h2{
-    color: #fffefa;
-}
-
-.comment{
-    margin: 2%;
-    padding-bottom: 2%;
-}
-
-.comment hr{
-    background: #DD403A;
-    height: 2px;
-}
 
 .call{
     width: 100%;
-    background: #8f8f8f54;
-    backdrop-filter: blur(8px);
     text-align: center;
     margin-bottom: 8%;
-    border-radius: 5px;
-    border-left: 6px solid #DD403A;
-    border-right: 6px solid #DD403A;
 }
 
 .call a{
     padding: .7%;
     color: #DD403A;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 900;
     font-size: 20px;
     background: white;
     border: 1px solid #ffffff;
@@ -307,25 +330,51 @@
 }
 
 #more{
+    font-size: 35px;
+    font-weight: 900;
     color: #ffffff;
     padding: 1%;
-    padding-bottom: 1.5%;
-}
-
-.profilelink a:hover{
-    transition: .3s,.5s ease-in-out;
-    color: rgb(166, 182, 255);
+    padding-bottom: .4%;
 }
 
 
-.footer{
+.foot{
+    text-align: center;
     padding: 1%;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
     margin-top: 6%;
+    color: #fff;
     background: #1e1c1fee;
     backdrop-filter: blur(15px);
+}
+
+.foot h3{
+    font-size: 23px;
+}
+
+.foot h5{
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.foot hr{
+    background: #fff;
+}
+
+.foot a{
+    color: #3E363F;
+    background: #fff;
+    padding: .5%;
+    font-weight: 900;
+}
+
+.foot a:hover{
+    text-decoration: none;
+    color: #DD403A;
+}
+
+.contactdetails{
+    margin-bottom: 1.4%;
 }
 
 .details{
