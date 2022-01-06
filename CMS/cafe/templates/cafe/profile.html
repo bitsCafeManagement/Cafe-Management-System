@@ -10,26 +10,35 @@
         <div class="media-body">
           <h2 class="account-heading">{{ user.username }}</h2>
           <hr>
-          <p class="text-secondary">{{ user.email }}</p>
+          <p class="text-secondary">Email: {{ user.email }}</p>
+          <p class="text-secondary">Phone Number: {{ user.profile.phone_number }}</p>
+          <p class="text-secondary">Address: {{ user.profile.address }}</p>
           <a href="{% url 'logout' %}">LOGOUT</a>
         </div>
       </div>
     </div>
-
-    <fieldset>
-      <div class="content-section">
-          <form method="POST" enctype="multipart/form-data">
-              {% csrf_token %}
-              <fieldset class="form-group">
-                  <legend class="border-bottom mb-4">CONTACT INFORMATION</legend>
-                  {{Cform|crispy}}
-                  {{Pform|crispy}}
-              </fieldset>
-  
-              <div class="form-group">
-                  <button id="regbtn" class="btn btn-outline-info" type="submit">UPDATE</button>
-              </div>
-          </form>
+    <h1 id="updatetag">UPDATE PROFILE</h1>
+    <div class="forms">
+      <div class="updateform">
+        <fieldset>
+          <div class="content-section">
+              <form method="POST" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  <fieldset class="form-group">
+                      <legend class="border-bottom mb-4">YOUR DINE PROFILE</legend>
+                      {{Uform|crispy}}
+                      {{Cform|crispy}}
+                      {{Pform|crispy}}
+                  </fieldset>
+      
+                  <div class="form-group">
+                      <button id="regbtn" class="btn btn-outline-info" type="submit">UPDATE</button>
+                  </div>
+              </form>
+          </div>
+      </fieldset>
       </div>
-  </fieldset>
+
+
+    </div>
 {% endblock profileblock %}

@@ -5,7 +5,7 @@
 }
 
 #body{
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0),rgba(255, 0, 0, 0.411)) , url("back.jpg");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0),rgba(255, 64, 64, 0.425)) , url("back.jpg");
     background-attachment:fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -14,12 +14,12 @@
 
 #body::-webkit-scrollbar{
     width: .5em;
-    background: #dd3f3a;
+    background: #dd3f3aa4;
 }
 
 #body::-webkit-scrollbar-thumb{
-    background: #F8D300;
-    border: 3px solid #DD403A;
+    background: #dd3f3a;
+    box-shadow: 0px 2px 10px 0 #3E363F;
 }
 
 .navsec{
@@ -167,6 +167,7 @@
 }
 
 #hint_id_password1 ul{
+    display: none;
     list-style-type: square;
     padding-left: 5%;
     color: #3E363F;
@@ -210,8 +211,7 @@
 }
 
 .contactbody{
-    margin-top: 3%;
-    margin-left: 10%;
+    margin: 10%;
     margin-right: 60%;
 }
 
@@ -222,14 +222,16 @@
 
 .contactbody h1{
     text-align: left;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .contactbody h3{
+    font-weight: 600;
     text-align: left;
 }
 
 .contactbody h5{
+    font-weight: 600;
     color: #DD403A;
     text-align: left;
 }
@@ -275,14 +277,15 @@
     width: 25%;
     padding: 3%;
     margin-bottom: 5%;
-    box-shadow: 2px 3px 3px 0 rgba(0, 0, 0, 0.089);
-    border: 2px solid #3E363F;
+    box-shadow: 2px 3px 30px 0 rgba(0, 0, 0, 0.315);
+    border: 3px solid #3E363F;
     border-left: 50px solid #3E363F;
-    transition: all .7s ease-in-out;
+    border-radius: 5px;
+    transition: all .6s ease-in-out;
 }
 
 .obj:hover{
-    transform: scale(1.05);
+    transform: translateY(-8%);
 }
 
 .obj h3{

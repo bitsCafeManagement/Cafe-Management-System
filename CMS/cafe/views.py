@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
-from  base.forms import UpdateProfile, UpdateProfilePhoto
+from  base.forms import UpdateProfile, UpdateProfilePhoto, AddContactInfo
 
 # Create your views here.
 
@@ -14,16 +14,23 @@ def homecafe(request):
 @login_required
 def profile(request):
     if request.method == 'POST':
-        C_form = UpdateProfile(request.POST, instance = request.user)
+        U_form = UpdateProfile(request.POST, instance = request.user)
         P_form = UpdateProfilePhoto(request.POST,request.FILES ,instance= request.user.profile)
-        if C_form.is_valid() and P_form.is_valid():
-            C_form.save()
+        C_form = AddContactInfo(request.POST, instance = request.user.profile)
+        
+        if U_form.is_valid() and P_form.is_valid():
+            U_form.save()
             P_form.save()
             return redirect('profile')
+        if C_form.is_valid():
+            C_form.save()
+            return redirect('profile')
+        
     else:
-        C_form = UpdateProfile(instance = request.user)
-        photof = UpdateProfilePhoto(instance= request.user)
-    return render(request, 'cafe/profile.html', {'title': 'Profile','Cform':C_form, 'Pform':P_form})
+        U_form = UpdateProfile(instance = request.user)
+        P_form = UpdateProfilePhoto(instance= request.user.profile)
+        C_form = AddContactInfo(instance = request.user.profile)
+    return render(request, 'cafe/profile.html', {'title': 'Profile','Uform':U_form, 'Pform':P_form, 'Cform':C_form})
 @login_required
 def menu(request):
     context = {
